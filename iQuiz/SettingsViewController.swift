@@ -71,7 +71,11 @@ class SettingsViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         let mainController = segue.destinationViewController as! ViewController
-        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let quizData = defaults.arrayForKey("quizData")
+        {
+            self.newQuiz = quizData as! [Dictionary<String, AnyObject>]
+        }
         mainController.newQuizzes = self.newQuiz
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.

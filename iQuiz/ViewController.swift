@@ -18,22 +18,9 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     let cellIdentifier = "quizCell"
     
-    let quizzess = [
-        ["Mathematics", "Test your math skills with this test", "math.png"],
-        ["Marvel Super Heroes", "How much do you know about Marvel super heroes?", "marvel.png"],
-        ["Science", "Check your knowledge of science", "science.png"]
-    
-    ]
-    
     let quizPictures = ["science.png", "marvel.png", "math.png"]
     
     var newQuizzes = [Dictionary<String, AnyObject>]()
-    
-    let mathematicsQuiz = [Question(question: "2 + 2", answers: ["3", "4", "5", "6"], correctAnswer: "4"), Question(question: "2 * 2", answers: ["2","4","6","8"], correctAnswer: "4"), Question(question: "8 - 3", answers: ["4", "5","6","7"], correctAnswer: "5")]
-    
-    let marvelQuiz = [Question(question: "What is Thor's main weapon?", answers: ["sword", "mace", "hammer", "spear"], correctAnswer: "hammer"), Question(question: "What color is the Hulk's skin?", answers: ["blue", "green","purple","orange"], correctAnswer: "green"), Question(question: "Which super hero uses a shield?", answers: ["Captain America", "Wolverine", "Iron Man", "Spider Man"], correctAnswer: "Captain America")]
-    
-    let scienceQuiz = [Question(question: "Most common gas in Earth's atmosphere?", answers: ["oxygen", "nitrogen", "carbon", "hydrogen"], correctAnswer: "nitrogen"), Question(question: "The product of mass and velocity is?", answers: ["Kinetic energy", "Acceleration", "Momentum", "Force"], correctAnswer: "Momentum"), Question(question: "Which of these is NOT a simple machine?", answers: ["Pulley", "Screw", "Wedge", "Hammer"], correctAnswer: "Hammer")]
     
     @IBOutlet weak var quizTable: UITableView!
     
